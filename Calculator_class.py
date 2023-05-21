@@ -1,13 +1,6 @@
 # class Calculator
 class Calculator:
 
-    # constructor
-    def __init__(self):
-        self.num1 = 0.0
-        self.num = 0.0
-        self.operation = ""
-        self.result = None
-
     # get numbers
     def get_numbers(self):
         try:
@@ -18,11 +11,13 @@ class Calculator:
 
     # choose operation
     def choose_operation(self): 
+        self.operation = input("Enter operation to be used: ")
         match self.operation:
             case "+": self.result = self.num1 + self.num2
             case "-": self.result = self.num1 - self.num2
             case "*": self.result = self.num1 * self.num2
             case "/": self.result = self.num1 / self.num2
+        return self.result
     
     # display result
     def display_result(self):
