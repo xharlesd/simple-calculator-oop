@@ -3,6 +3,8 @@ from Calculator_class import Calculator
 
 calc = Calculator()
 
+calc.title()
+
 # get numbers
 calc.get_numbers()
 
