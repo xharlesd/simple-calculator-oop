@@ -7,8 +7,8 @@ class Calculator:
     # get numbers
     def get_numbers(self):
         try:
-            self.num1 = float(input("Enter first number: "))
-            self.num2 = float(input("Enter second number: "))
+            self.num1 = float(input(Fore.GREEN + "\033[1m" + "\n\t Enter first number:   \033[0m" + "\033[0;32m"))
+            self.num2 = float(input(Fore.GREEN + "\033[1m" + "\t Enter second number:   \033[0m" + "\033[0;32m"))
         except:
             print("ERROR! Invalid input.")
 
