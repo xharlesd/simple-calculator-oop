@@ -1,5 +1,5 @@
 import pyfiglet
-from colorama import Fore, Style
+from colorama import Fore
 import time
 
 # class Calculator
