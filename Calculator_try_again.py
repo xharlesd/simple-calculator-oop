@@ -6,7 +6,7 @@ def try_again():
     retry = None
     while retry is None:
         time.sleep(1)
-        again = input(Fore.MAGENTA + "\n\t    Do you want to try again? (YES/NO)  ")
+        again = input(Fore.MAGENTA + "\n\t Do you want to try again (YES/NO)?  ")
 
         # the program will run again if the user inputted YES
         if again == "Y" or again == "Yes" or again == "YES" or again == "yes":
@@ -16,15 +16,16 @@ def try_again():
         # the program will terminate if the user inputted NO
         if again == "N" or again == "No" or again == "NO" or again == "no":
             time.sleep(0.5)
-            print(Fore.CYAN + "\t    [Program will be terminated..............]")
+            print(Fore.CYAN + "\t [Program will be terminated..............]")
 
             time.sleep(1.5)
             print("\n")
-            print(Fore.GREEN + "\033[1m-" * 140 + '\033[0m')
+            print(Fore.CYAN + "\033[1m-" * 110 + '\033[0m')
             print(" ")
 
-            lab = pyfiglet.figlet_format("   THANK YOU !!   ", font = "banner3",  width = 140, justify = "center")
-            print(Style.BRIGHT + Fore.GREEN + lab)
+            lab = pyfiglet.figlet_format("   THANK YOU !!   ", font = "banner3",  width = 110, justify = "center")
+            print(Style.BRIGHT + Fore.CYAN + lab)
             exit()
+
         else:
-            print(Fore.RED + "\t    [ERROR] Please choose either YES or NO only.")
+            print(Fore.RED + "\t [ERROR] Please choose either YES or NO only.")
