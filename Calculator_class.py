@@ -25,3 +25,5 @@ class Calculator:
             case "/": self.result = self.num1 / self.num2
     
     # display result
+    def display_result(self):
+        print("Result: ", self.result)
