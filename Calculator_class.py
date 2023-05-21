@@ -1,12 +1,23 @@
 import pyfiglet
 from colorama import Fore, Style
+import time
 
 # class Calculator
 class Calculator:
+
+    # program title
     def title(self):
         print("")
         title = pyfiglet.figlet_format("CALCULATOR", font = "banner3-d", width = 110, justify = "center")
         print(Fore.LIGHTCYAN_EX + title)
+
+    # instructions
+    def instructions(self):
+        print(Fore.LIGHTCYAN_EX + "\033[1m-" * 109 + '\033[0m')
+        ins = "PLEASE ENTER NUMERICAL VALUES FOR FIRST AND SECOND NUMBER, THEN SELECT THE OPERATION TO USE." 
+        ins_centered = ins.center(110)
+        print( "\033[1m" + ins_centered) 
+        print(Fore.LIGHTCYAN_EX + "\033[1m-" * 109 + '\033[0m')
 
     # get numbers
     def get_numbers(self):
@@ -14,7 +25,7 @@ class Calculator:
             self.num1 = float(input(Fore.CYAN + "\033[1m" + "\n\t FIRST NUMBER:    \033[0m" + Fore.CYAN))
             self.num2 = float(input(Fore.CYAN + "\033[1m" + "\t SECOND NUMBER:   \033[0m" + Fore.CYAN))
         except:
-            print(Fore.RED + "\t [ERROR] Invalid input.")
+            print(Fore.RED + "\t [ERROR] Invalid input. Please enter numerical values only.")
 
     # choose operation
     def choose_operation(self): 
@@ -25,9 +36,11 @@ class Calculator:
                 case "-": self.result = self.num1 - self.num2
                 case "*": self.result = self.num1 * self.num2
                 case "/": self.result = self.num1 / self.num2
+            print(Fore.YELLOW + "\n\t [Calculating....................]")
+            time.sleep(2.5)
             return self.result
         except:
-            print(Fore.RED + "\t [ERROR] Invalid input.")
+            print(Fore.RED + "\t [ERROR] Invalid input. Please choose among the four operations only.")
     
     # display result
     def display_result(self):
