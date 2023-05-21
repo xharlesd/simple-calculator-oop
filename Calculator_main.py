@@ -22,3 +22,4 @@ while True:
     calc.display_result() 
 
     try_again()
+
