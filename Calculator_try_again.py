@@ -29,3 +29,4 @@ def try_again():
 
         else:
             print(Fore.RED + "\t [ERROR] Please choose either YES or NO only.")
+            

@@ -53,9 +53,3 @@ class Calculator:
     def display_result(self):
         result = round(self.result, 4)
         print(Fore.GREEN + "\033[1m" + f"\n\t RESULT:     {result} \033[0m ")
-
-
-
-    
-        
-
