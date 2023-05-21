@@ -1,3 +1,6 @@
+import pyfiglet
+from colorama import Fore, Style
+
 # class Calculator
 class Calculator:
 
