@@ -11,7 +11,6 @@ calc.title()
 calc.instructions()
 
 while True:
-        
     # get numbers
     calc.get_numbers()  
 
@@ -20,6 +19,6 @@ while True:
 
     # display result
     calc.display_result() 
-
+    
+    # try again
     try_again()
-

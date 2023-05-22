@@ -23,10 +23,9 @@ def try_again():
             print(Fore.CYAN + "\033[1m-" * 110 + '\033[0m')
             print(" ")
 
-            lab = pyfiglet.figlet_format("   THANK YOU !!   ", font = "banner3",  width = 110, justify = "center")
-            print(Style.BRIGHT + Fore.CYAN + lab)
+            end = pyfiglet.figlet_format("   THANK YOU !!   ", font = "banner3",  width = 110, justify = "center")
+            print(Style.BRIGHT + Fore.CYAN + end)
             exit()
 
         else:
             print(Fore.RED + "\t [ERROR] Please choose either YES or NO only.")
-            

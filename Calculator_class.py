@@ -29,7 +29,7 @@ class Calculator:
                 break
             except:
                 print(Fore.RED + "\t [ERROR] Invalid input. Please enter numerical values only.")
-                try_again()
+                continue
 
     # choose operation
     def choose_operation(self): 
@@ -41,15 +41,19 @@ class Calculator:
                     case "-": self.result = self.num1 - self.num2
                     case "*": self.result = self.num1 * self.num2
                     case "/": self.result = self.num1 / self.num2
-                print(Fore.YELLOW + "\n\t [Calculating....................]")
-                time.sleep(2.5)
+                    case other:
+                        print(Fore.RED + "\t [ERROR] Invalid input. Please choose among the four operations only.")
+                        continue
                 break
-            
-            except:
-                print(Fore.RED + "\t [ERROR] Invalid input. Please choose among the four operations only.")
+
+            except ZeroDivisionError:
+                print(Fore.RED + "\t [ERROR] Invalid input. Division by zero is not allowed.")
                 try_again()
-    
+ 
     # display result
     def display_result(self):
+        print(Fore.YELLOW + "\t [Calculating....................]")
+        time.sleep(2.5)
+    
         result = round(self.result, 4)
         print(Fore.GREEN + "\033[1m" + f"\n\t RESULT:     {result} \033[0m ")
