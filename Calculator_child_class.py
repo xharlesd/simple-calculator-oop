@@ -31,3 +31,13 @@ class CalculatorChild(Calculator):
 
             else:
                 print(Fore.RED + "\t [ERROR] Please choose either YES or NO only.")
+    
+    def get_numbers(self):
+        while True:
+            try:
+                self.num1 = float(input(Fore.YELLOW + "\033[1m" + "\n\t FIRST NUMBER:    \033[0m" + Fore.YELLOW))
+                self.num2 = float(input(Fore.YELLOW + "\033[1m" + "\t SECOND NUMBER:   \033[0m" + Fore.YELLOW))
+                break
+            except:
+                print(Fore.RED + "\t [ERROR] Invalid input. Please enter numerical values only.")
+                continue
