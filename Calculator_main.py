@@ -1,6 +1,5 @@
 # call calculator class
 from Calculator_class import Calculator
-from Calculator_try_again import try_again
 from Calculator_child_class import CalculatorChild
 
 calc = Calculator()
@@ -23,4 +22,4 @@ while True:
     calc.display_result() 
     
     # try again
-    try_again()
+    child.try_again()

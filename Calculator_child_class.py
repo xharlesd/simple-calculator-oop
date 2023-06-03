@@ -4,7 +4,7 @@ import time
 from Calculator_class import Calculator
 
 class CalculatorChild(Calculator):
-    def try_again():
+    def try_again(self):
         retry = None
         while retry is None:
             time.sleep(1)
