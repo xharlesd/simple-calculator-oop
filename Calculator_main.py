@@ -1,8 +1,10 @@
 # call calculator class
 from Calculator_class import Calculator
 from Calculator_try_again import try_again
+from Calculator_child_class import CalculatorChild
 
 calc = Calculator()
+child = CalculatorChild()
 
 # program title
 calc.title()
