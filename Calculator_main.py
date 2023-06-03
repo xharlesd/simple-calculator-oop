@@ -13,7 +13,7 @@ calc.instructions()
 
 while True:
     # get numbers
-    child.get_numbers()  
+    calc.get_numbers()  
 
     # choose operation
     child.choose_operation()
