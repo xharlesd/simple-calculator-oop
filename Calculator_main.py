@@ -13,13 +13,13 @@ calc.instructions()
 
 while True:
     # get numbers
-    calc.get_numbers()  
+    child.get_numbers()  
 
     # choose operation
-    calc.choose_operation()
+    child.choose_operation()
 
     # display result
-    calc.display_result() 
+    child.display_result() 
     
     # try again
     child.try_again()
